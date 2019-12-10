@@ -1,0 +1,31 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "id": "ReactSchematics",
+  "title": "React Schematics",
+  "type": "object",
+  "description": "Generate a React component, styles and test",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Name of component",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      },
+      "x-prompt": "What is the component name?"
+    },
+    "path": {
+      "type": "string",
+      "description": "Path for component",
+      "$default": {
+        "$source": "argv",
+        "index": 1
+      },
+      "x-prompt": "Where do you create this component?"
+    }
+  },
+  "required": [
+    "path",
+    "name"
+  ]
+}
